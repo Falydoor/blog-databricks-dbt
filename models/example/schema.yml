@@ -1,0 +1,15 @@
+
+version: 2
+
+sources:
+  - name: nyc_slice_dbt
+    tables:
+      - name: pizza_raw
+
+models:
+  - name: pizza
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
